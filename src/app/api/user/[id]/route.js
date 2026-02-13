@@ -39,6 +39,7 @@ export async function PATCH(req, { params }) {
     if (data.firstname != null) partialUpdate.firstname = data.firstname;
     if (data.lastname != null) partialUpdate.lastname = data.lastname;
     if (data.status != null) partialUpdate.status = data.status;
+    if (data.profileImage != null) partialUpdate.profileImage = data.profileImage;
 
     if (Object.keys(partialUpdate).length === 0) {
         return NextResponse.json({ message: "No fields to update" }, { status: 400, headers: corsHeaders });
